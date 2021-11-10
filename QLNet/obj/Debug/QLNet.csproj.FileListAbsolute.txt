@@ -1,0 +1,42 @@
+C:\Users\PC\source\repos\QLNet\QLNet\bin\Debug\QLNet.exe.config
+C:\Users\PC\source\repos\QLNet\QLNet\bin\Debug\QLNet.exe
+C:\Users\PC\source\repos\QLNet\QLNet\bin\Debug\QLNet.pdb
+C:\Users\PC\source\repos\QLNet\QLNet\obj\Debug\QLNet.csprojAssemblyReference.cache
+C:\Users\PC\source\repos\QLNet\QLNet\obj\Debug\QLNet.EditComputer.resources
+C:\Users\PC\source\repos\QLNet\QLNet\obj\Debug\QLNet.ListComputer.resources
+C:\Users\PC\source\repos\QLNet\QLNet\obj\Debug\QLNet.EditCustomer.resources
+C:\Users\PC\source\repos\QLNet\QLNet\obj\Debug\QLNet.ListCustomer.resources
+C:\Users\PC\source\repos\QLNet\QLNet\obj\Debug\QLNet.InfoUser.resources
+C:\Users\PC\source\repos\QLNet\QLNet\obj\Debug\QLNet.EditMenu.resources
+C:\Users\PC\source\repos\QLNet\QLNet\obj\Debug\QLNet.ListMenu.resources
+C:\Users\PC\source\repos\QLNet\QLNet\obj\Debug\QLNet.LoginForm.resources
+C:\Users\PC\source\repos\QLNet\QLNet\obj\Debug\QLNet.MainFormAdmin.resources
+C:\Users\PC\source\repos\QLNet\QLNet\obj\Debug\QLNet.MainFormCustomer.resources
+C:\Users\PC\source\repos\QLNet\QLNet\obj\Debug\QLNet.NapTienWindow.resources
+C:\Users\PC\source\repos\QLNet\QLNet\obj\Debug\QLNet.Properties.Resources.resources
+C:\Users\PC\source\repos\QLNet\QLNet\obj\Debug\QLNet.csproj.GenerateResource.cache
+C:\Users\PC\source\repos\QLNet\QLNet\obj\Debug\QLNet.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\QLNet\QLNet\obj\Debug\QLNet.exe
+C:\Users\PC\source\repos\QLNet\QLNet\obj\Debug\QLNet.pdb
+C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\bin\Debug\QLNet.exe.config
+C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\bin\Debug\QLNet.exe
+C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\bin\Debug\QLNet.pdb
+C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.csprojAssemblyReference.cache
+C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.AreaList.resources
+C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.EditComputer.resources
+C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.ListComputer.resources
+C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.EditCustomer.resources
+C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.ListCustomer.resources
+C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.InfoUser.resources
+C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.EditMenu.resources
+C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.ListMenu.resources
+C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.LoginForm.resources
+C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.MainFormAdmin.resources
+C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.MainFormCustomer.resources
+C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.NapTienWindow.resources
+C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.Properties.Resources.resources
+C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.csproj.GenerateResource.cache
+C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.exe
+C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.pdb
+C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.EditArea.resources
