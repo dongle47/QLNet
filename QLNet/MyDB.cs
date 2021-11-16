@@ -9,7 +9,7 @@ namespace QLNet
 {
     class MyDB
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-MGN3IP8\\MSSQLSERVER01; Initial Catalog=QLNet; Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=localhost;Initial Catalog=QLNet;Integrated Security=True");
         //SqlConnection con = new SqlConnection("Server=DESKTOP-MGN3IP8/MSSQLSERVER01;Database=SV");
         public SqlConnection getConnection
         {

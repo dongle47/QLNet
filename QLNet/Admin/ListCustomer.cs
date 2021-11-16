@@ -42,5 +42,20 @@ namespace QLNet
             f.textBoxUserName.Text = labelUserId.Text;
             f.ShowDialog();
         }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            Customer customer = new Customer();
+
+            string userName = textBoxUserName.Text;
+            string password = textBoxPass.Text;
+            string name = textBoxFullName.Text;
+            string email = textBoxEmail.Text;
+            string phone = textBoxPhone.Text;
+            string cmnd = textBoxCMND.Text;
+            DateTime bdate = dateTimePicker1.Value;
+
+            customer.insertCustomer(userName, password, name, email, phone, cmnd, bdate);
+        }
     }
 }

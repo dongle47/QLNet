@@ -40,3 +40,25 @@ C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.csproj.CoreCompil
 C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.exe
 C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.pdb
 C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.EditArea.resources
+D:\dbms\cuoi-ky\QLNet\QLNet\bin\Debug\QLNet.exe.config
+D:\dbms\cuoi-ky\QLNet\QLNet\bin\Debug\QLNet.exe
+D:\dbms\cuoi-ky\QLNet\QLNet\bin\Debug\QLNet.pdb
+D:\dbms\cuoi-ky\QLNet\QLNet\obj\Debug\QLNet.csproj.AssemblyReference.cache
+D:\dbms\cuoi-ky\QLNet\QLNet\obj\Debug\QLNet.AreaList.resources
+D:\dbms\cuoi-ky\QLNet\QLNet\obj\Debug\QLNet.EditComputer.resources
+D:\dbms\cuoi-ky\QLNet\QLNet\obj\Debug\QLNet.ListComputer.resources
+D:\dbms\cuoi-ky\QLNet\QLNet\obj\Debug\QLNet.EditCustomer.resources
+D:\dbms\cuoi-ky\QLNet\QLNet\obj\Debug\QLNet.ListCustomer.resources
+D:\dbms\cuoi-ky\QLNet\QLNet\obj\Debug\QLNet.EditArea.resources
+D:\dbms\cuoi-ky\QLNet\QLNet\obj\Debug\QLNet.InfoUser.resources
+D:\dbms\cuoi-ky\QLNet\QLNet\obj\Debug\QLNet.EditMenu.resources
+D:\dbms\cuoi-ky\QLNet\QLNet\obj\Debug\QLNet.ListMenu.resources
+D:\dbms\cuoi-ky\QLNet\QLNet\obj\Debug\QLNet.LoginForm.resources
+D:\dbms\cuoi-ky\QLNet\QLNet\obj\Debug\QLNet.MainFormAdmin.resources
+D:\dbms\cuoi-ky\QLNet\QLNet\obj\Debug\QLNet.MainFormCustomer.resources
+D:\dbms\cuoi-ky\QLNet\QLNet\obj\Debug\QLNet.NapTienWindow.resources
+D:\dbms\cuoi-ky\QLNet\QLNet\obj\Debug\QLNet.Properties.Resources.resources
+D:\dbms\cuoi-ky\QLNet\QLNet\obj\Debug\QLNet.csproj.GenerateResource.cache
+D:\dbms\cuoi-ky\QLNet\QLNet\obj\Debug\QLNet.csproj.CoreCompileInputs.cache
+D:\dbms\cuoi-ky\QLNet\QLNet\obj\Debug\QLNet.exe
+D:\dbms\cuoi-ky\QLNet\QLNet\obj\Debug\QLNet.pdb

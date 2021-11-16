@@ -51,19 +51,23 @@ namespace QLNet
             this.groupBox1.Controls.Add(this.textBoxUser);
             this.groupBox1.Controls.Add(this.labelPass);
             this.groupBox1.Controls.Add(this.labelUsername);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(16, 15);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(316, 207);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(421, 255);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin đăng nhập";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // radioButtonKh
             // 
             this.radioButtonKh.AutoSize = true;
-            this.radioButtonKh.Location = new System.Drawing.Point(172, 34);
+            this.radioButtonKh.Location = new System.Drawing.Point(229, 42);
+            this.radioButtonKh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButtonKh.Name = "radioButtonKh";
-            this.radioButtonKh.Size = new System.Drawing.Size(37, 17);
+            this.radioButtonKh.Size = new System.Drawing.Size(44, 21);
             this.radioButtonKh.TabIndex = 7;
             this.radioButtonKh.TabStop = true;
             this.radioButtonKh.Text = "kh";
@@ -72,9 +76,10 @@ namespace QLNet
             // radioButtonNv
             // 
             this.radioButtonNv.AutoSize = true;
-            this.radioButtonNv.Location = new System.Drawing.Point(111, 34);
+            this.radioButtonNv.Location = new System.Drawing.Point(148, 42);
+            this.radioButtonNv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButtonNv.Name = "radioButtonNv";
-            this.radioButtonNv.Size = new System.Drawing.Size(37, 17);
+            this.radioButtonNv.Size = new System.Drawing.Size(45, 21);
             this.radioButtonNv.TabIndex = 6;
             this.radioButtonNv.TabStop = true;
             this.radioButtonNv.Text = "ad";
@@ -82,9 +87,10 @@ namespace QLNet
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(183, 165);
+            this.buttonCancel.Location = new System.Drawing.Point(244, 203);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.Size = new System.Drawing.Size(100, 28);
             this.buttonCancel.TabIndex = 5;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -92,9 +98,10 @@ namespace QLNet
             // 
             // buttonLogin
             // 
-            this.buttonLogin.Location = new System.Drawing.Point(64, 165);
+            this.buttonLogin.Location = new System.Drawing.Point(85, 203);
+            this.buttonLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(75, 23);
+            this.buttonLogin.Size = new System.Drawing.Size(100, 28);
             this.buttonLogin.TabIndex = 1;
             this.buttonLogin.Text = "Đăng nhập";
             this.buttonLogin.UseVisualStyleBackColor = true;
@@ -102,44 +109,50 @@ namespace QLNet
             // 
             // textBoxPass
             // 
-            this.textBoxPass.Location = new System.Drawing.Point(145, 131);
+            this.textBoxPass.Location = new System.Drawing.Point(193, 161);
+            this.textBoxPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxPass.Name = "textBoxPass";
-            this.textBoxPass.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPass.Size = new System.Drawing.Size(132, 22);
             this.textBoxPass.TabIndex = 4;
             // 
             // textBoxUser
             // 
-            this.textBoxUser.Location = new System.Drawing.Point(145, 78);
+            this.textBoxUser.Location = new System.Drawing.Point(193, 96);
+            this.textBoxUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxUser.Name = "textBoxUser";
-            this.textBoxUser.Size = new System.Drawing.Size(100, 20);
+            this.textBoxUser.Size = new System.Drawing.Size(132, 22);
             this.textBoxUser.TabIndex = 3;
             // 
             // labelPass
             // 
             this.labelPass.AutoSize = true;
-            this.labelPass.Location = new System.Drawing.Point(70, 134);
+            this.labelPass.Location = new System.Drawing.Point(93, 165);
+            this.labelPass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPass.Name = "labelPass";
-            this.labelPass.Size = new System.Drawing.Size(52, 13);
+            this.labelPass.Size = new System.Drawing.Size(66, 17);
             this.labelPass.TabIndex = 1;
             this.labelPass.Text = "Mật khẩu";
             // 
             // labelUsername
             // 
             this.labelUsername.AutoSize = true;
-            this.labelUsername.Location = new System.Drawing.Point(58, 81);
+            this.labelUsername.Location = new System.Drawing.Point(77, 100);
+            this.labelUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(81, 13);
+            this.labelUsername.Size = new System.Drawing.Size(105, 17);
             this.labelUsername.TabIndex = 2;
             this.labelUsername.Text = "Tên đăng nhập";
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(352, 234);
+            this.ClientSize = new System.Drawing.Size(469, 288);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LoginForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
