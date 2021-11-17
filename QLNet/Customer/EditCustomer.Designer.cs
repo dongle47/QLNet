@@ -49,140 +49,157 @@ namespace QLNet
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(189, 393);
+            this.buttonCancel.Location = new System.Drawing.Point(252, 484);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(88, 34);
+            this.buttonCancel.Size = new System.Drawing.Size(117, 42);
             this.buttonCancel.TabIndex = 27;
             this.buttonCancel.Text = "THOÁT";
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(52, 393);
+            this.buttonEdit.Location = new System.Drawing.Point(69, 484);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(98, 34);
+            this.buttonEdit.Size = new System.Drawing.Size(131, 42);
             this.buttonEdit.TabIndex = 26;
             this.buttonEdit.Text = "CẬP NHẬT";
             this.buttonEdit.UseVisualStyleBackColor = true;
             // 
             // textBoxPass
             // 
-            this.textBoxPass.Location = new System.Drawing.Point(122, 105);
+            this.textBoxPass.Location = new System.Drawing.Point(163, 129);
+            this.textBoxPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxPass.Name = "textBoxPass";
-            this.textBoxPass.Size = new System.Drawing.Size(115, 20);
+            this.textBoxPass.Size = new System.Drawing.Size(152, 22);
             this.textBoxPass.TabIndex = 25;
             // 
             // textBoxFullName
             // 
-            this.textBoxFullName.Location = new System.Drawing.Point(122, 150);
+            this.textBoxFullName.Location = new System.Drawing.Point(163, 185);
+            this.textBoxFullName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxFullName.Name = "textBoxFullName";
-            this.textBoxFullName.Size = new System.Drawing.Size(115, 20);
+            this.textBoxFullName.Size = new System.Drawing.Size(152, 22);
             this.textBoxFullName.TabIndex = 24;
             // 
             // textBoxCMND
             // 
-            this.textBoxCMND.Location = new System.Drawing.Point(122, 298);
+            this.textBoxCMND.Location = new System.Drawing.Point(163, 367);
+            this.textBoxCMND.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxCMND.Name = "textBoxCMND";
-            this.textBoxCMND.Size = new System.Drawing.Size(115, 20);
+            this.textBoxCMND.Size = new System.Drawing.Size(152, 22);
             this.textBoxCMND.TabIndex = 23;
             // 
             // textBoxPhone
             // 
-            this.textBoxPhone.Location = new System.Drawing.Point(122, 251);
+            this.textBoxPhone.Location = new System.Drawing.Point(163, 309);
+            this.textBoxPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(115, 20);
+            this.textBoxPhone.Size = new System.Drawing.Size(152, 22);
             this.textBoxPhone.TabIndex = 22;
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(122, 200);
+            this.textBoxEmail.Location = new System.Drawing.Point(163, 246);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(115, 20);
+            this.textBoxEmail.Size = new System.Drawing.Size(152, 22);
             this.textBoxEmail.TabIndex = 21;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(60, 108);
+            this.label6.Location = new System.Drawing.Point(80, 133);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 13);
+            this.label6.Size = new System.Drawing.Size(73, 17);
             this.label6.TabIndex = 20;
             this.label6.Text = "Password:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(81, 203);
+            this.label5.Location = new System.Drawing.Point(108, 250);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.Size = new System.Drawing.Size(46, 17);
             this.label5.TabIndex = 19;
             this.label5.Text = "Email:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(58, 254);
+            this.label4.Location = new System.Drawing.Point(77, 313);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 13);
+            this.label4.Size = new System.Drawing.Size(76, 17);
             this.label4.TabIndex = 18;
             this.label4.Text = "Điện thoại:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(74, 301);
+            this.label3.Location = new System.Drawing.Point(99, 370);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.Size = new System.Drawing.Size(52, 17);
             this.label3.TabIndex = 17;
             this.label3.Text = "CMND:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(74, 153);
+            this.label2.Location = new System.Drawing.Point(99, 188);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.Size = new System.Drawing.Size(54, 17);
             this.label2.TabIndex = 16;
             this.label2.Text = "Họ tên:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(61, 63);
+            this.label1.Location = new System.Drawing.Point(81, 78);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.Size = new System.Drawing.Size(73, 17);
             this.label1.TabIndex = 15;
             this.label1.Text = "Username";
             // 
             // textBoxUserName
             // 
-            this.textBoxUserName.Location = new System.Drawing.Point(122, 60);
+            this.textBoxUserName.Location = new System.Drawing.Point(163, 74);
+            this.textBoxUserName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxUserName.Name = "textBoxUserName";
-            this.textBoxUserName.Size = new System.Drawing.Size(115, 20);
+            this.textBoxUserName.Size = new System.Drawing.Size(152, 22);
             this.textBoxUserName.TabIndex = 14;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(122, 335);
+            this.dateTimePicker1.Location = new System.Drawing.Point(163, 412);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(115, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(152, 22);
             this.dateTimePicker1.TabIndex = 29;
+            this.dateTimePicker1.UseWaitCursor = true;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(62, 341);
+            this.label7.Location = new System.Drawing.Point(83, 420);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 13);
+            this.label7.Size = new System.Drawing.Size(71, 17);
             this.label7.TabIndex = 28;
             this.label7.Text = "Ngày sinh";
             // 
             // EditCustomer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(329, 450);
+            this.ClientSize = new System.Drawing.Size(439, 554);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.buttonCancel);
@@ -199,6 +216,7 @@ namespace QLNet
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxUserName);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "EditCustomer";
             this.Text = "EditCustomer";
             this.ResumeLayout(false);
@@ -222,7 +240,7 @@ namespace QLNet
         public System.Windows.Forms.TextBox textBoxPhone;
         public System.Windows.Forms.TextBox textBoxEmail;
         public System.Windows.Forms.TextBox textBoxUserName;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label7;
+        public System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

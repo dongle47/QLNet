@@ -38,5 +38,22 @@ namespace QLNet
                 return false;
             }
         }
+        
+        public bool deleteCustomer(string userName)
+        {
+            SqlCommand command = new SqlCommand("EXEC dbo.deleteUserCurMoneyCus @userName", mydb.getConnection);
+            command.Parameters.Add("@userName", SqlDbType.NVarChar).Value = userName;
+            mydb.openConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                mydb.closeConnection();
+                return true;
+            }
+            else
+            {
+                mydb.closeConnection();
+                return false;
+            }
+        }
     }
 }

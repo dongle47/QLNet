@@ -56,17 +56,18 @@ namespace QLNet
             // 
             this.dataGridViewListCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewListCustomer.Location = new System.Drawing.Point(424, 15);
-            this.dataGridViewListCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewListCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewListCustomer.Name = "dataGridViewListCustomer";
             this.dataGridViewListCustomer.RowHeadersWidth = 51;
             this.dataGridViewListCustomer.Size = new System.Drawing.Size(637, 279);
             this.dataGridViewListCustomer.TabIndex = 0;
+            this.dataGridViewListCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewListCustomer_CellContentClick);
             this.dataGridViewListCustomer.Click += new System.EventHandler(this.dataGridViewListCustomer_Click);
             // 
             // buttonCancel
             // 
             this.buttonCancel.Location = new System.Drawing.Point(896, 352);
-            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(131, 37);
             this.buttonCancel.TabIndex = 2;
@@ -76,7 +77,7 @@ namespace QLNet
             // buttonEdit
             // 
             this.buttonEdit.Location = new System.Drawing.Point(456, 352);
-            this.buttonEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(4);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(147, 37);
             this.buttonEdit.TabIndex = 3;
@@ -87,17 +88,18 @@ namespace QLNet
             // buttonXoa
             // 
             this.buttonXoa.Location = new System.Drawing.Point(664, 352);
-            this.buttonXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonXoa.Margin = new System.Windows.Forms.Padding(4);
             this.buttonXoa.Name = "buttonXoa";
             this.buttonXoa.Size = new System.Drawing.Size(131, 37);
             this.buttonXoa.TabIndex = 4;
             this.buttonXoa.Text = "XÓA";
             this.buttonXoa.UseVisualStyleBackColor = true;
+            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
             // 
             // buttonAdd
             // 
             this.buttonAdd.Location = new System.Drawing.Point(169, 416);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(129, 39);
             this.buttonAdd.TabIndex = 5;
@@ -109,7 +111,7 @@ namespace QLNet
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(169, 366);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(152, 22);
             this.dateTimePicker1.TabIndex = 43;
@@ -127,7 +129,7 @@ namespace QLNet
             // textBoxPass
             // 
             this.textBoxPass.Location = new System.Drawing.Point(169, 90);
-            this.textBoxPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxPass.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPass.Name = "textBoxPass";
             this.textBoxPass.Size = new System.Drawing.Size(152, 22);
             this.textBoxPass.TabIndex = 41;
@@ -135,7 +137,7 @@ namespace QLNet
             // textBoxFullName
             // 
             this.textBoxFullName.Location = new System.Drawing.Point(169, 145);
-            this.textBoxFullName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxFullName.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxFullName.Name = "textBoxFullName";
             this.textBoxFullName.Size = new System.Drawing.Size(152, 22);
             this.textBoxFullName.TabIndex = 40;
@@ -143,7 +145,7 @@ namespace QLNet
             // textBoxCMND
             // 
             this.textBoxCMND.Location = new System.Drawing.Point(169, 327);
-            this.textBoxCMND.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxCMND.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxCMND.Name = "textBoxCMND";
             this.textBoxCMND.Size = new System.Drawing.Size(152, 22);
             this.textBoxCMND.TabIndex = 39;
@@ -151,7 +153,7 @@ namespace QLNet
             // textBoxPhone
             // 
             this.textBoxPhone.Location = new System.Drawing.Point(169, 270);
-            this.textBoxPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxPhone.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPhone.Name = "textBoxPhone";
             this.textBoxPhone.Size = new System.Drawing.Size(152, 22);
             this.textBoxPhone.TabIndex = 38;
@@ -159,7 +161,7 @@ namespace QLNet
             // textBoxEmail
             // 
             this.textBoxEmail.Location = new System.Drawing.Point(169, 207);
-            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(152, 22);
             this.textBoxEmail.TabIndex = 37;
@@ -227,7 +229,7 @@ namespace QLNet
             // textBoxUserName
             // 
             this.textBoxUserName.Location = new System.Drawing.Point(169, 34);
-            this.textBoxUserName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxUserName.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxUserName.Name = "textBoxUserName";
             this.textBoxUserName.Size = new System.Drawing.Size(152, 22);
             this.textBoxUserName.TabIndex = 30;
@@ -267,7 +269,7 @@ namespace QLNet
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.dataGridViewListCustomer);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ListCustomer";
             this.Text = "ListCustomer";
             this.Load += new System.EventHandler(this.ListCustomer_Load);
