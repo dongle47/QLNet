@@ -46,6 +46,8 @@ namespace QLNet
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,21 +70,23 @@ namespace QLNet
             // 
             // buttonXoa
             // 
-            this.buttonXoa.Location = new System.Drawing.Point(551, 301);
+            this.buttonXoa.Location = new System.Drawing.Point(545, 292);
             this.buttonXoa.Name = "buttonXoa";
-            this.buttonXoa.Size = new System.Drawing.Size(75, 23);
+            this.buttonXoa.Size = new System.Drawing.Size(81, 32);
             this.buttonXoa.TabIndex = 5;
             this.buttonXoa.Text = "XÓA";
             this.buttonXoa.UseVisualStyleBackColor = true;
+            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(454, 301);
+            this.buttonEdit.Location = new System.Drawing.Point(442, 292);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(75, 23);
+            this.buttonEdit.Size = new System.Drawing.Size(87, 32);
             this.buttonEdit.TabIndex = 4;
             this.buttonEdit.Text = "CHỈNH SỬA";
             this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // buttonAdd
             // 
@@ -92,6 +96,7 @@ namespace QLNet
             this.buttonAdd.TabIndex = 26;
             this.buttonAdd.Text = "THÊM";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // comboBoxArea
             // 
@@ -191,11 +196,30 @@ namespace QLNet
             this.label1.TabIndex = 14;
             this.label1.Text = "Processor";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(107, 26);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(16, 13);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "Id";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // textBoxId
+            // 
+            this.textBoxId.Location = new System.Drawing.Point(155, 19);
+            this.textBoxId.Name = "textBoxId";
+            this.textBoxId.Size = new System.Drawing.Size(109, 20);
+            this.textBoxId.TabIndex = 28;
+            // 
             // ListComputer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(842, 397);
+            this.Controls.Add(this.textBoxId);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.comboBoxArea);
             this.Controls.Add(this.textBoxMonitor);
@@ -241,5 +265,7 @@ namespace QLNet
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBoxId;
     }
 }

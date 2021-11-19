@@ -26,5 +26,10 @@ namespace QLNet
         {
 
         }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

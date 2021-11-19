@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace QLNet
         {
             InitializeComponent();
         }
-
+        MyDB db = new MyDB();
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -24,8 +25,27 @@ namespace QLNet
 
         private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            InfoUser f = new InfoUser();
-            f.Show();
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            DataTable table = new DataTable();
+
+            SqlCommand command = new SqlCommand("EXEC infoAdminById @username = @id", db.getConnection);
+            command.Parameters.Add("@id", SqlDbType.NVarChar).Value = labelUsername.Text;
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+            if (table.Rows.Count > 0)
+            {
+                InfoAdmin f = new InfoAdmin();
+                f.textBoxUser.Text = table.Rows[0][0].ToString();
+                f.textBoxPass.Text = table.Rows[0][1].ToString();
+                f.textBoxName.Text = table.Rows[0][2].ToString();
+                f.textBoxPhone.Text = table.Rows[0][3].ToString();
+                f.textBoxEmail.Text = table.Rows[0][4].ToString();
+                f.textBoxEmail.Text = table.Rows[0][4].ToString();
+                f.textBoxCMND.Text = table.Rows[0][5].ToString();
+                f.dateTimePickerNS.Value = (DateTime)table.Rows[0][6];
+                f.textBoxSalary.Text = table.Rows[0][7].ToString();
+                f.Show();
+            }
         }
 
         private void nạpTiềnToolStripMenuItem_Click(object sender, EventArgs e)
@@ -55,6 +75,23 @@ namespace QLNet
         private void nạpTiềnToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             NapTienWindow f = new NapTienWindow();
+            f.ShowDialog();
+        }
+
+        private void MainFormAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lịchSửĐăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HistoryLoginForm f = new HistoryLoginForm();
+            f.ShowDialog();
+        }
+
+        private void doanhThuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IncomeForm f = new IncomeForm();
             f.ShowDialog();
         }
     }

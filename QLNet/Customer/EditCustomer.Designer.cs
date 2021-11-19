@@ -55,6 +55,7 @@ namespace QLNet
             this.buttonCancel.TabIndex = 27;
             this.buttonCancel.Text = "THOÁT";
             this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonEdit
             // 
@@ -64,6 +65,7 @@ namespace QLNet
             this.buttonEdit.TabIndex = 26;
             this.buttonEdit.Text = "CẬP NHẬT";
             this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // textBoxPass
             // 
@@ -222,7 +224,7 @@ namespace QLNet
         public System.Windows.Forms.TextBox textBoxPhone;
         public System.Windows.Forms.TextBox textBoxEmail;
         public System.Windows.Forms.TextBox textBoxUserName;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label7;
+        public System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

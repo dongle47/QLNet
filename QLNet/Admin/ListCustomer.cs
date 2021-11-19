@@ -17,10 +17,10 @@ namespace QLNet
         {
             InitializeComponent();
         }
-
+        customer kh = new customer();
         private void ListCustomer_Load(object sender, EventArgs e)
         {
-            SqlCommand command = new SqlCommand("SELECT * FROM users");
+            SqlCommand command = new SqlCommand("SELECT * FROM customerList");
             fillGrid(command);
         }
 
@@ -40,7 +40,60 @@ namespace QLNet
         {
             EditCustomer f = new EditCustomer();
             f.textBoxUserName.Text = labelUserId.Text;
+            f.textBoxPass.Text = dataGridViewListCustomer.CurrentRow.Cells[1].Value.ToString();
+            f.textBoxFullName.Text = dataGridViewListCustomer.CurrentRow.Cells[2].Value.ToString();
+            f.textBoxPhone.Text = dataGridViewListCustomer.CurrentRow.Cells[3].Value.ToString();
+            f.textBoxEmail.Text = dataGridViewListCustomer.CurrentRow.Cells[4].Value.ToString();
+            f.textBoxCMND.Text = dataGridViewListCustomer.CurrentRow.Cells[5].Value.ToString();
+            f.dateTimePicker1.Value = (DateTime)dataGridViewListCustomer.CurrentRow.Cells[6].Value;
             f.ShowDialog();
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            string id = textBoxUserName.Text;
+            string pass = textBoxPass.Text;
+            string name = textBoxFullName.Text;
+            string phone = textBoxPhone.Text;
+            string mail = textBoxEmail.Text;
+            string cmnd = textBoxEmail.Text;
+            DateTime birth = dateTimePicker1.Value;
+
+            try
+            {
+                if (kh.insert(id, pass, name, phone, mail, cmnd, birth))
+                {
+                    MessageBox.Show("Information Updated", "Edit Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Error", "Edit Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Edit Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            SqlCommand command = new SqlCommand("SELECT * FROM customerList");
+            fillGrid(command);
+        }
+
+        private void buttonXoa_Click(object sender, EventArgs e)
+        {
+            string id = labelUserId.Text;
+            if ((MessageBox.Show("Are You Sure You Want To Delete This Worker", "Delete Worker", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
+            {
+                if (kh.delete(id))
+                {
+                    MessageBox.Show("Worker Deleted", "Delete Worker", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Worker Not Deleted", "Delete Worker", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            SqlCommand command = new SqlCommand("SELECT * FROM customerList");
+            fillGrid(command);
         }
     }
 }

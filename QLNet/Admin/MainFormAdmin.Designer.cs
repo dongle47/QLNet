@@ -36,6 +36,7 @@ namespace QLNet
             this.khuVựcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nạpTiềnToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.lịchSửĐăngNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.doanhThuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -62,6 +63,7 @@ namespace QLNet
             this.khuVựcToolStripMenuItem,
             this.nạpTiềnToolStripMenuItem1,
             this.lịchSửĐăngNhậpToolStripMenuItem,
+            this.doanhThuToolStripMenuItem,
             this.thôngTinCáNhânToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -109,6 +111,14 @@ namespace QLNet
             this.lịchSửĐăngNhậpToolStripMenuItem.Name = "lịchSửĐăngNhậpToolStripMenuItem";
             this.lịchSửĐăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(116, 20);
             this.lịchSửĐăngNhậpToolStripMenuItem.Text = "Lịch sử đăng nhập";
+            this.lịchSửĐăngNhậpToolStripMenuItem.Click += new System.EventHandler(this.lịchSửĐăngNhậpToolStripMenuItem_Click);
+            // 
+            // doanhThuToolStripMenuItem
+            // 
+            this.doanhThuToolStripMenuItem.Name = "doanhThuToolStripMenuItem";
+            this.doanhThuToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.doanhThuToolStripMenuItem.Text = "Doanh thu";
+            this.doanhThuToolStripMenuItem.Click += new System.EventHandler(this.doanhThuToolStripMenuItem_Click);
             // 
             // thôngTinCáNhânToolStripMenuItem
             // 
@@ -247,6 +257,7 @@ namespace QLNet
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainFormAdmin";
             this.Text = "MainForm";
+            this.Load += new System.EventHandler(this.MainFormAdmin_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -277,6 +288,7 @@ namespace QLNet
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.ToolStripMenuItem lịchSửĐăngNhậpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thôngTinCáNhânToolStripMenuItem;
-        private System.Windows.Forms.Label labelUsername;
+        private System.Windows.Forms.ToolStripMenuItem doanhThuToolStripMenuItem;
+        public System.Windows.Forms.Label labelUsername;
     }
 }

@@ -18,9 +18,9 @@ namespace QLNet
         //    SqlConnection conn = new SqlConnection(connString);
         //    return conn;
         //}
-        GetDBConnection(string username, string password)
+        GetDBConnection(string database, string username, string password)
         {
-            string connString = "Data Source = DESKTOP-MGN3IP8\\MSSQLSERVER01; Initial Catalog= QLNet; "
+            string connString = "Data Source = DESKTOP-MGN3IP8\\MSSQLSERVER01; Initial Catalog= "+database+"; "
                          + "Persist Security Info=True;User ID=" + username + ";Password=" + password;
             SqlConnection conn = new SqlConnection(connString);
             return conn;
@@ -44,7 +44,7 @@ namespace QLNet
 
         public static DataTable getTable(SqlCommand command)
         {
-            command.Connection = new SqlConnection("Data Source=DESKTOP-MGN3IP8\\MSSQLSERVER01; Initial Catalog=QLNet; Integrated Security=True");
+            command.Connection = new SqlConnection("Data Source = localhost\\MSSQLSERVER01; Initial Catalog=QLNet; Integrated Security=True");
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataTable table = new DataTable();
             adapter.Fill(table);

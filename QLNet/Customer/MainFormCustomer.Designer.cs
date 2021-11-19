@@ -40,10 +40,10 @@ namespace QLNet
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xemThôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gọiMónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button2 = new System.Windows.Forms.Button();
+            this.labelId = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -146,7 +146,6 @@ namespace QLNet
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.đổiMậtKhẩuToolStripMenuItem,
             this.xemThôngTinCáNhânToolStripMenuItem,
             this.gọiMónToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -154,12 +153,6 @@ namespace QLNet
             this.menuStrip1.Size = new System.Drawing.Size(536, 24);
             this.menuStrip1.TabIndex = 11;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // đổiMậtKhẩuToolStripMenuItem
-            // 
-            this.đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
-            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
-            this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi mật khẩu";
             // 
             // xemThôngTinCáNhânToolStripMenuItem
             // 
@@ -173,21 +166,33 @@ namespace QLNet
             this.gọiMónToolStripMenuItem.Name = "gọiMónToolStripMenuItem";
             this.gọiMónToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.gọiMónToolStripMenuItem.Text = "Gọi món";
+            this.gọiMónToolStripMenuItem.Click += new System.EventHandler(this.gọiMónToolStripMenuItem_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(228, 315);
+            this.button2.Location = new System.Drawing.Point(217, 311);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(95, 27);
             this.button2.TabIndex = 12;
             this.button2.Text = "THOÁT";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // labelId
+            // 
+            this.labelId.AutoSize = true;
+            this.labelId.Location = new System.Drawing.Point(34, 235);
+            this.labelId.Name = "labelId";
+            this.labelId.Size = new System.Drawing.Size(41, 13);
+            this.labelId.TabIndex = 13;
+            this.labelId.Text = "label10";
             // 
             // MainFormCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(536, 350);
+            this.Controls.Add(this.labelId);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);
@@ -220,9 +225,9 @@ namespace QLNet
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xemThôngTinCáNhânToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gọiMónToolStripMenuItem;
         private System.Windows.Forms.Button button2;
+        public System.Windows.Forms.Label labelId;
     }
 }

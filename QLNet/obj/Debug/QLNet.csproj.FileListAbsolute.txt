@@ -40,3 +40,8 @@ C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.csproj.CoreCompil
 C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.exe
 C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.pdb
 C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.EditArea.resources
+C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.HistoryLoginForm.resources
+C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.IncomeForm.resources
+C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.GoiMonForm.resources
+C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.InfoAdmin.resources
+C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.InfoCustomer.resources

@@ -30,59 +30,35 @@ namespace QLNet
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButtonKh = new System.Windows.Forms.RadioButton();
-            this.radioButtonNv = new System.Windows.Forms.RadioButton();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.textBoxPass = new System.Windows.Forms.TextBox();
             this.textBoxUser = new System.Windows.Forms.TextBox();
             this.labelPass = new System.Windows.Forms.Label();
             this.labelUsername = new System.Windows.Forms.Label();
+            this.comboBoxDataBase = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButtonKh);
-            this.groupBox1.Controls.Add(this.radioButtonNv);
+            this.groupBox1.Controls.Add(this.comboBoxDataBase);
             this.groupBox1.Controls.Add(this.buttonCancel);
             this.groupBox1.Controls.Add(this.buttonLogin);
             this.groupBox1.Controls.Add(this.textBoxPass);
             this.groupBox1.Controls.Add(this.textBoxUser);
             this.groupBox1.Controls.Add(this.labelPass);
             this.groupBox1.Controls.Add(this.labelUsername);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(46, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(316, 207);
+            this.groupBox1.Size = new System.Drawing.Size(316, 257);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin đăng nhập";
             // 
-            // radioButtonKh
-            // 
-            this.radioButtonKh.AutoSize = true;
-            this.radioButtonKh.Location = new System.Drawing.Point(172, 34);
-            this.radioButtonKh.Name = "radioButtonKh";
-            this.radioButtonKh.Size = new System.Drawing.Size(37, 17);
-            this.radioButtonKh.TabIndex = 7;
-            this.radioButtonKh.TabStop = true;
-            this.radioButtonKh.Text = "kh";
-            this.radioButtonKh.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonNv
-            // 
-            this.radioButtonNv.AutoSize = true;
-            this.radioButtonNv.Location = new System.Drawing.Point(111, 34);
-            this.radioButtonNv.Name = "radioButtonNv";
-            this.radioButtonNv.Size = new System.Drawing.Size(37, 17);
-            this.radioButtonNv.TabIndex = 6;
-            this.radioButtonNv.TabStop = true;
-            this.radioButtonNv.Text = "ad";
-            this.radioButtonNv.UseVisualStyleBackColor = true;
-            // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(183, 165);
+            this.buttonCancel.Location = new System.Drawing.Point(176, 205);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 5;
@@ -92,7 +68,7 @@ namespace QLNet
             // 
             // buttonLogin
             // 
-            this.buttonLogin.Location = new System.Drawing.Point(64, 165);
+            this.buttonLogin.Location = new System.Drawing.Point(57, 205);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(75, 23);
             this.buttonLogin.TabIndex = 1;
@@ -102,14 +78,14 @@ namespace QLNet
             // 
             // textBoxPass
             // 
-            this.textBoxPass.Location = new System.Drawing.Point(145, 131);
+            this.textBoxPass.Location = new System.Drawing.Point(138, 171);
             this.textBoxPass.Name = "textBoxPass";
             this.textBoxPass.Size = new System.Drawing.Size(100, 20);
             this.textBoxPass.TabIndex = 4;
             // 
             // textBoxUser
             // 
-            this.textBoxUser.Location = new System.Drawing.Point(145, 78);
+            this.textBoxUser.Location = new System.Drawing.Point(138, 118);
             this.textBoxUser.Name = "textBoxUser";
             this.textBoxUser.Size = new System.Drawing.Size(100, 20);
             this.textBoxUser.TabIndex = 3;
@@ -117,7 +93,7 @@ namespace QLNet
             // labelPass
             // 
             this.labelPass.AutoSize = true;
-            this.labelPass.Location = new System.Drawing.Point(70, 134);
+            this.labelPass.Location = new System.Drawing.Point(63, 174);
             this.labelPass.Name = "labelPass";
             this.labelPass.Size = new System.Drawing.Size(52, 13);
             this.labelPass.TabIndex = 1;
@@ -126,20 +102,29 @@ namespace QLNet
             // labelUsername
             // 
             this.labelUsername.AutoSize = true;
-            this.labelUsername.Location = new System.Drawing.Point(58, 81);
+            this.labelUsername.Location = new System.Drawing.Point(51, 121);
             this.labelUsername.Name = "labelUsername";
             this.labelUsername.Size = new System.Drawing.Size(81, 13);
             this.labelUsername.TabIndex = 2;
             this.labelUsername.Text = "Tên đăng nhập";
             // 
+            // comboBoxDataBase
+            // 
+            this.comboBoxDataBase.FormattingEnabled = true;
+            this.comboBoxDataBase.Location = new System.Drawing.Point(66, 67);
+            this.comboBoxDataBase.Name = "comboBoxDataBase";
+            this.comboBoxDataBase.Size = new System.Drawing.Size(150, 21);
+            this.comboBoxDataBase.TabIndex = 8;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(352, 234);
+            this.ClientSize = new System.Drawing.Size(394, 292);
             this.Controls.Add(this.groupBox1);
             this.Name = "LoginForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -155,8 +140,7 @@ namespace QLNet
         private System.Windows.Forms.TextBox textBoxUser;
         private System.Windows.Forms.Label labelPass;
         private System.Windows.Forms.Label labelUsername;
-        private System.Windows.Forms.RadioButton radioButtonKh;
-        private System.Windows.Forms.RadioButton radioButtonNv;
+        private System.Windows.Forms.ComboBox comboBoxDataBase;
     }
 }
 

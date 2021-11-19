@@ -88,6 +88,7 @@ namespace QLNet
             this.buttonXoa.TabIndex = 4;
             this.buttonXoa.Text = "XÓA";
             this.buttonXoa.UseVisualStyleBackColor = true;
+            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
             // 
             // buttonAdd
             // 
@@ -97,6 +98,7 @@ namespace QLNet
             this.buttonAdd.TabIndex = 5;
             this.buttonAdd.Text = "THÊM";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // dateTimePicker1
             // 

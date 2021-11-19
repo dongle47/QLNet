@@ -35,6 +35,7 @@ namespace QLNet
             this.textBoxFoodName = new System.Windows.Forms.TextBox();
             this.labelPrice = new System.Windows.Forms.Label();
             this.labelFoodName = new System.Windows.Forms.Label();
+            this.labelId = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonCancel
@@ -45,6 +46,7 @@ namespace QLNet
             this.buttonCancel.TabIndex = 11;
             this.buttonCancel.Text = "THOÁT";
             this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonEdit
             // 
@@ -54,6 +56,7 @@ namespace QLNet
             this.buttonEdit.TabIndex = 10;
             this.buttonEdit.Text = "CẬP NHẬT";
             this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // textBoxPrice
             // 
@@ -87,11 +90,21 @@ namespace QLNet
             this.labelFoodName.TabIndex = 6;
             this.labelFoodName.Text = "Tên món ăn";
             // 
+            // labelId
+            // 
+            this.labelId.AutoSize = true;
+            this.labelId.Location = new System.Drawing.Point(40, 22);
+            this.labelId.Name = "labelId";
+            this.labelId.Size = new System.Drawing.Size(64, 13);
+            this.labelId.TabIndex = 12;
+            this.labelId.Text = "Tên món ăn";
+            // 
             // EditMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(323, 215);
+            this.Controls.Add(this.labelId);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.textBoxPrice);
@@ -112,5 +125,6 @@ namespace QLNet
         public System.Windows.Forms.Button buttonEdit;
         public System.Windows.Forms.TextBox textBoxPrice;
         public System.Windows.Forms.TextBox textBoxFoodName;
+        public System.Windows.Forms.Label labelId;
     }
 }

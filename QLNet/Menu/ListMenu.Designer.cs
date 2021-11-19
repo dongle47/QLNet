@@ -51,39 +51,43 @@ namespace QLNet
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(374, 214);
+            this.buttonEdit.Location = new System.Drawing.Point(360, 209);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(75, 23);
+            this.buttonEdit.Size = new System.Drawing.Size(89, 28);
             this.buttonEdit.TabIndex = 1;
             this.buttonEdit.Text = "CHỈNH SỬA";
             this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // buttonXoa
             // 
-            this.buttonXoa.Location = new System.Drawing.Point(471, 214);
+            this.buttonXoa.Location = new System.Drawing.Point(465, 209);
             this.buttonXoa.Name = "buttonXoa";
-            this.buttonXoa.Size = new System.Drawing.Size(75, 23);
+            this.buttonXoa.Size = new System.Drawing.Size(81, 28);
             this.buttonXoa.TabIndex = 2;
             this.buttonXoa.Text = "XÓA";
             this.buttonXoa.UseVisualStyleBackColor = true;
+            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(574, 214);
+            this.buttonCancel.Location = new System.Drawing.Point(574, 209);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.Size = new System.Drawing.Size(90, 28);
             this.buttonCancel.TabIndex = 3;
             this.buttonCancel.Text = "THOÁT";
             this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonAdd
             // 
             this.buttonAdd.Location = new System.Drawing.Point(144, 191);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd.Size = new System.Drawing.Size(102, 32);
             this.buttonAdd.TabIndex = 4;
             this.buttonAdd.Text = "THÊM";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // textBoxPrice
             // 
