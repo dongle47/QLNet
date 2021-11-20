@@ -27,35 +27,6 @@ namespace QLNet
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-
-            //string username = textBoxUser.Text;
-            //string password = textBoxPass.Text;
-
-            //SqlConnection con = DBSQLServerUtils.GetDBConnection(username, password); ;
-            //try
-            //{
-            //    con.Open();
-            //    MessageBox.Show("Connection successful!", "Notify", MessageBoxButtons.OK);
-
-
-            //}
-            //catch (Exception E)
-            //{
-            //    MessageBox.Show("Error: " + E.Message, "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-
-            //if (radioButtonKh.Checked == true)
-            //{
-            //    MainFormCustomer f = new MainFormCustomer();
-            //    f.Show();
-            //}
-            //else if (radioButtonNv.Checked == true)
-            //{
-            //    MainFormAdmin f = new MainFormAdmin();
-            //    f.Show();
-            //}
-           
-
             string database = comboBoxDataBase.SelectedItem.ToString();
             string username = textBoxUser.Text;
             string password = textBoxPass.Text;
@@ -63,18 +34,11 @@ namespace QLNet
             SqlConnection con = DBSQLServerUtils.GetDBConnection(database, username, password); ;
             try
             {
-                con.Open();
-                MessageBox.Show("Connection successful!", "Notify", MessageBoxButtons.OK);
-                
-                SqlDataAdapter adapter = new SqlDataAdapter();
-                DataTable tableAd = new DataTable();
-                DataTable tableKh = new DataTable();
-
-                SqlCommand command = new SqlCommand("SELECT * FROM users WHERE userUsername=@id AND userUsername=@Pass AND userRole='ad'", db.getConnection);
+                SqlCommand command = new SqlCommand("SELECT * FROM users WHERE userUsername=@id AND userPassword=@Pass AND userRole='ad'", db.getConnection);
                 command.Parameters.Add("@id", SqlDbType.NVarChar).Value = textBoxUser.Text;
                 command.Parameters.Add("@Pass", SqlDbType.VarChar).Value = textBoxPass.Text;
-                adapter.SelectCommand = command;
-                adapter.Fill(tableAd);
+                DataTable tableAd = DBSQLServerUtils.getTable(command);
+
                 if (tableAd.Rows.Count > 0)
                 {
                     string userId = tableAd.Rows[0][0].ToString();
@@ -82,18 +46,24 @@ namespace QLNet
                     f.labelUsername.Text = userId;
                     f.Show();
                 }
-
-                command = new SqlCommand("SELECT * FROM users WHERE userUsername=@id AND userPassword=@Pass AND userRole='kh'", db.getConnection);
-                command.Parameters.Add("@id", SqlDbType.NVarChar).Value = textBoxUser.Text;
-                command.Parameters.Add("@Pass", SqlDbType.NVarChar).Value = textBoxPass.Text;
-                adapter.SelectCommand = command;
-                adapter.Fill(tableKh);
-                if (tableKh.Rows.Count > 0)
+                else
                 {
-                    string userId = tableKh.Rows[0][0].ToString();
-                    MainFormCustomer f = new MainFormCustomer();
-                    f.labelId.Text = userId;
-                    f.Show();
+                    command = new SqlCommand("SELECT * FROM users WHERE userUsername=@id AND userPassword=@Pass AND userRole='kh'", db.getConnection);
+                    command.Parameters.Add("@id", SqlDbType.NVarChar).Value = textBoxUser.Text;
+                    command.Parameters.Add("@Pass", SqlDbType.NVarChar).Value = textBoxPass.Text;
+                    DataTable tableKh = DBSQLServerUtils.getTable(command);
+
+                    if (tableKh.Rows.Count > 0)
+                    {
+                        string userId = tableKh.Rows[0][0].ToString();
+                        MainFormCustomer f = new MainFormCustomer();
+                        f.labelId.Text = userId;
+                        f.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Tài khoản không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
                 }
 
             }
@@ -125,5 +95,6 @@ namespace QLNet
             }
             comboBoxDataBase.SelectedItem = "QLNet";
         }
+
     }
 }

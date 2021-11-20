@@ -30,13 +30,13 @@ namespace QLNet
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBoxDataBase = new System.Windows.Forms.ComboBox();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.textBoxPass = new System.Windows.Forms.TextBox();
             this.textBoxUser = new System.Windows.Forms.TextBox();
             this.labelPass = new System.Windows.Forms.Label();
             this.labelUsername = new System.Windows.Forms.Label();
-            this.comboBoxDataBase = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,28 +49,36 @@ namespace QLNet
             this.groupBox1.Controls.Add(this.textBoxUser);
             this.groupBox1.Controls.Add(this.labelPass);
             this.groupBox1.Controls.Add(this.labelUsername);
-            this.groupBox1.Location = new System.Drawing.Point(46, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(316, 257);
+            this.groupBox1.Size = new System.Drawing.Size(316, 268);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin đăng nhập";
+            // 
+            // comboBoxDataBase
+            // 
+            this.comboBoxDataBase.FormattingEnabled = true;
+            this.comboBoxDataBase.Location = new System.Drawing.Point(66, 67);
+            this.comboBoxDataBase.Name = "comboBoxDataBase";
+            this.comboBoxDataBase.Size = new System.Drawing.Size(150, 21);
+            this.comboBoxDataBase.TabIndex = 8;
             // 
             // buttonCancel
             // 
             this.buttonCancel.Location = new System.Drawing.Point(176, 205);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.Size = new System.Drawing.Size(95, 31);
             this.buttonCancel.TabIndex = 5;
-            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.Text = "Thoát";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonLogin
             // 
-            this.buttonLogin.Location = new System.Drawing.Point(57, 205);
+            this.buttonLogin.Location = new System.Drawing.Point(40, 205);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(75, 23);
+            this.buttonLogin.Size = new System.Drawing.Size(92, 31);
             this.buttonLogin.TabIndex = 1;
             this.buttonLogin.Text = "Đăng nhập";
             this.buttonLogin.UseVisualStyleBackColor = true;
@@ -108,19 +116,11 @@ namespace QLNet
             this.labelUsername.TabIndex = 2;
             this.labelUsername.Text = "Tên đăng nhập";
             // 
-            // comboBoxDataBase
-            // 
-            this.comboBoxDataBase.FormattingEnabled = true;
-            this.comboBoxDataBase.Location = new System.Drawing.Point(66, 67);
-            this.comboBoxDataBase.Name = "comboBoxDataBase";
-            this.comboBoxDataBase.Size = new System.Drawing.Size(150, 21);
-            this.comboBoxDataBase.TabIndex = 8;
-            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(394, 292);
+            this.ClientSize = new System.Drawing.Size(347, 292);
             this.Controls.Add(this.groupBox1);
             this.Name = "LoginForm";
             this.Text = "Form1";

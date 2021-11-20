@@ -93,6 +93,7 @@ namespace QLNet
             // labelId
             // 
             this.labelId.AutoSize = true;
+            this.labelId.ForeColor = System.Drawing.SystemColors.Control;
             this.labelId.Location = new System.Drawing.Point(40, 22);
             this.labelId.Name = "labelId";
             this.labelId.Size = new System.Drawing.Size(64, 13);

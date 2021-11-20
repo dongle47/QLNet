@@ -18,10 +18,6 @@ namespace QLNet
             InitializeComponent();
         }
         computer com = new computer();
-        private void textBoxkeyboard_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void ListComputer_Load(object sender, EventArgs e)
         {
@@ -56,39 +52,34 @@ namespace QLNet
             {
                 if (com.insert(id, des, idArea, processor, monitor, keyboard, headphone))
                 {
-                    MessageBox.Show("Information Updated", "Edit Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Đã thêm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Error", "Edit Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Đã thêm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Edit Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             SqlCommand command = new SqlCommand("SELECT * FROM computerInfo");
             fillGrid(command);
 
         }
 
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonXoa_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            if ((MessageBox.Show("Are You Sure You Want To Delete This Worker", "Delete Worker", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
+            if ((MessageBox.Show("Bạn có chắc muốn xóa", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
             {
                 if (com.delete(id))
                 {
-                    MessageBox.Show("Worker Deleted", "Delete Worker", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Đã xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Worker Not Deleted", "Delete Worker", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Đã xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             SqlCommand command = new SqlCommand("SELECT * FROM computerInfo");
@@ -106,6 +97,28 @@ namespace QLNet
             f.textBoxHeadphone.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
             f.textBoxDescrip.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
             f.ShowDialog();
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            if(textBoxSearch.Text == "")
+            {
+                SqlCommand command = new SqlCommand("SELECT * FROM computerInfo");
+                fillGrid(command);
+            }
+            else
+            {
+                SqlCommand command = new SqlCommand("EXEC infoComputerById @comId = @id");
+                command.Parameters.Add("@id", SqlDbType.NVarChar).Value = textBoxSearch.Text;
+                fillGrid(command);
+            }
+            
+
         }
     }
 }

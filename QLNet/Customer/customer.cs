@@ -34,11 +34,10 @@ namespace QLNet
             }
         }
 
-        public bool update(string id, string pass, string name, string phone, string mail, string cmnd, DateTime birth)
+        public bool update(string id, string name, string phone, string mail, string cmnd, DateTime birth)
         {
-            SqlCommand command = new SqlCommand("EXEC dbo.update_kh @id, @pass, @name, @phn, @mail, @cmnd, @birth", mydb.getConnection);
+            SqlCommand command = new SqlCommand("EXEC dbo.update_kh @id, @name, @phn, @mail, @cmnd, @birth", mydb.getConnection);
             command.Parameters.Add("@id", SqlDbType.NVarChar).Value = id;
-            command.Parameters.Add("@pass", SqlDbType.NVarChar).Value = pass;
             command.Parameters.Add("@name", SqlDbType.NVarChar).Value = name;
             command.Parameters.Add("@phn", SqlDbType.NVarChar).Value = phone;
             command.Parameters.Add("@mail", SqlDbType.NVarChar).Value = mail;
@@ -73,6 +72,22 @@ namespace QLNet
                 return false;
             }
         }
+        public bool deleteUserSQL(string id)
+        {
+            SqlCommand command = new SqlCommand("EXEC deleteUserSQL @id = @uid", mydb.getConnection);
+            command.Parameters.Add("@uid", SqlDbType.NVarChar).Value = id;
+            mydb.openConnection();
+            if ((command.ExecuteNonQuery()) == 1)
+            {
+                mydb.closeConnection();
+                return true;
+            }
+            else
+            {
+                mydb.closeConnection();
+                return false;
+            }
+        }
 
         public bool napTien(string id, int price)
         {
@@ -91,6 +106,38 @@ namespace QLNet
                 return false;
             }
         }
-
+        public bool goiMon(int billId, int foodId)
+        {
+            SqlCommand command = new SqlCommand("EXEC addBillListFood @billId = @bid, @foodId = @fid", mydb.getConnection);
+            command.Parameters.Add("@bid", SqlDbType.NVarChar).Value = billId;
+            command.Parameters.Add("@fid", SqlDbType.NVarChar).Value = foodId;
+            mydb.openConnection();
+            if ((command.ExecuteNonQuery()) == 1)
+            {
+                mydb.closeConnection();
+                return true;
+            }
+            else
+            {
+                mydb.closeConnection();
+                return false;
+            }
+        }
+        public bool xacNhanGoiMon(int billId)
+        {
+            SqlCommand command = new SqlCommand("EXEC addBillToIncome @billId = @bid", mydb.getConnection);
+            command.Parameters.Add("@bid", SqlDbType.NVarChar).Value = billId;
+            mydb.openConnection();
+            if ((command.ExecuteNonQuery()) == 1)
+            {
+                mydb.closeConnection();
+                return true;
+            }
+            else
+            {
+                mydb.closeConnection();
+                return false;
+            }
+        }
     }
 }

@@ -31,18 +31,21 @@ namespace QLNet
         {
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButtonMoney = new System.Windows.Forms.RadioButton();
-            this.radioButtonFood = new System.Windows.Forms.RadioButton();
-            this.radioButtonAll = new System.Windows.Forms.RadioButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.buttonSearch = new System.Windows.Forms.Button();
+            this.radioButtonMoney = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioButtonNo = new System.Windows.Forms.RadioButton();
+            this.radioButtonYes = new System.Windows.Forms.RadioButton();
             this.dateTimePickerNKT = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePickerNBD = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.radioButtonYes = new System.Windows.Forms.RadioButton();
-            this.radioButtonNo = new System.Windows.Forms.RadioButton();
+            this.radioButtonFood = new System.Windows.Forms.RadioButton();
+            this.radioButtonAll = new System.Windows.Forms.RadioButton();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.labelIncomeAvg = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.buttonCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -70,6 +73,16 @@ namespace QLNet
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lọc";
             // 
+            // buttonSearch
+            // 
+            this.buttonSearch.Location = new System.Drawing.Point(130, 192);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(91, 23);
+            this.buttonSearch.TabIndex = 8;
+            this.buttonSearch.Text = "Tìm kiếm";
+            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
+            // 
             // radioButtonMoney
             // 
             this.radioButtonMoney.AutoSize = true;
@@ -80,28 +93,6 @@ namespace QLNet
             this.radioButtonMoney.TabStop = true;
             this.radioButtonMoney.Text = "Nạp tiền";
             this.radioButtonMoney.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonFood
-            // 
-            this.radioButtonFood.AutoSize = true;
-            this.radioButtonFood.Location = new System.Drawing.Point(157, 19);
-            this.radioButtonFood.Name = "radioButtonFood";
-            this.radioButtonFood.Size = new System.Drawing.Size(61, 17);
-            this.radioButtonFood.TabIndex = 1;
-            this.radioButtonFood.TabStop = true;
-            this.radioButtonFood.Text = "Món ăn";
-            this.radioButtonFood.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonAll
-            // 
-            this.radioButtonAll.AutoSize = true;
-            this.radioButtonAll.Location = new System.Drawing.Point(86, 19);
-            this.radioButtonAll.Name = "radioButtonAll";
-            this.radioButtonAll.Size = new System.Drawing.Size(65, 17);
-            this.radioButtonAll.TabIndex = 0;
-            this.radioButtonAll.TabStop = true;
-            this.radioButtonAll.Text = "Toàn bộ";
-            this.radioButtonAll.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -118,15 +109,27 @@ namespace QLNet
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm theo ngày";
             // 
-            // buttonSearch
+            // radioButtonNo
             // 
-            this.buttonSearch.Location = new System.Drawing.Point(130, 192);
-            this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(91, 23);
-            this.buttonSearch.TabIndex = 8;
-            this.buttonSearch.Text = "Tìm kiếm";
-            this.buttonSearch.UseVisualStyleBackColor = true;
-            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
+            this.radioButtonNo.AutoSize = true;
+            this.radioButtonNo.Location = new System.Drawing.Point(134, 32);
+            this.radioButtonNo.Name = "radioButtonNo";
+            this.radioButtonNo.Size = new System.Drawing.Size(39, 17);
+            this.radioButtonNo.TabIndex = 12;
+            this.radioButtonNo.TabStop = true;
+            this.radioButtonNo.Text = "No";
+            this.radioButtonNo.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonYes
+            // 
+            this.radioButtonYes.AutoSize = true;
+            this.radioButtonYes.Location = new System.Drawing.Point(85, 32);
+            this.radioButtonYes.Name = "radioButtonYes";
+            this.radioButtonYes.Size = new System.Drawing.Size(43, 17);
+            this.radioButtonYes.TabIndex = 11;
+            this.radioButtonYes.TabStop = true;
+            this.radioButtonYes.Text = "Yes";
+            this.radioButtonYes.UseVisualStyleBackColor = true;
             // 
             // dateTimePickerNKT
             // 
@@ -162,33 +165,63 @@ namespace QLNet
             this.label2.TabIndex = 7;
             this.label2.Text = "Ngày kết thúc";
             // 
-            // radioButtonYes
+            // radioButtonFood
             // 
-            this.radioButtonYes.AutoSize = true;
-            this.radioButtonYes.Location = new System.Drawing.Point(70, 32);
-            this.radioButtonYes.Name = "radioButtonYes";
-            this.radioButtonYes.Size = new System.Drawing.Size(43, 17);
-            this.radioButtonYes.TabIndex = 11;
-            this.radioButtonYes.TabStop = true;
-            this.radioButtonYes.Text = "Yes";
-            this.radioButtonYes.UseVisualStyleBackColor = true;
+            this.radioButtonFood.AutoSize = true;
+            this.radioButtonFood.Location = new System.Drawing.Point(157, 19);
+            this.radioButtonFood.Name = "radioButtonFood";
+            this.radioButtonFood.Size = new System.Drawing.Size(61, 17);
+            this.radioButtonFood.TabIndex = 1;
+            this.radioButtonFood.TabStop = true;
+            this.radioButtonFood.Text = "Món ăn";
+            this.radioButtonFood.UseVisualStyleBackColor = true;
             // 
-            // radioButtonNo
+            // radioButtonAll
             // 
-            this.radioButtonNo.AutoSize = true;
-            this.radioButtonNo.Location = new System.Drawing.Point(119, 32);
-            this.radioButtonNo.Name = "radioButtonNo";
-            this.radioButtonNo.Size = new System.Drawing.Size(39, 17);
-            this.radioButtonNo.TabIndex = 12;
-            this.radioButtonNo.TabStop = true;
-            this.radioButtonNo.Text = "No";
-            this.radioButtonNo.UseVisualStyleBackColor = true;
+            this.radioButtonAll.AutoSize = true;
+            this.radioButtonAll.Location = new System.Drawing.Point(86, 19);
+            this.radioButtonAll.Name = "radioButtonAll";
+            this.radioButtonAll.Size = new System.Drawing.Size(65, 17);
+            this.radioButtonAll.TabIndex = 0;
+            this.radioButtonAll.TabStop = true;
+            this.radioButtonAll.Text = "Toàn bộ";
+            this.radioButtonAll.UseVisualStyleBackColor = true;
+            // 
+            // labelIncomeAvg
+            // 
+            this.labelIncomeAvg.AutoSize = true;
+            this.labelIncomeAvg.Location = new System.Drawing.Point(12, 448);
+            this.labelIncomeAvg.Name = "labelIncomeAvg";
+            this.labelIncomeAvg.Size = new System.Drawing.Size(35, 13);
+            this.labelIncomeAvg.TabIndex = 3;
+            this.labelIncomeAvg.Text = "label3";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(493, 98);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 13);
+            this.label4.TabIndex = 4;
+            // 
+            // buttonCancel
+            // 
+            this.buttonCancel.Location = new System.Drawing.Point(133, 477);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(143, 29);
+            this.buttonCancel.TabIndex = 5;
+            this.buttonCancel.Text = "Thoát";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // IncomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 518);
+            this.ClientSize = new System.Drawing.Size(409, 518);
+            this.Controls.Add(this.buttonCancel);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelIncomeAvg);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView2);
             this.Name = "IncomeForm";
@@ -200,6 +233,7 @@ namespace QLNet
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -219,5 +253,8 @@ namespace QLNet
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePickerNBD;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button buttonCancel;
+        public System.Windows.Forms.Label labelIncomeAvg;
     }
 }

@@ -26,7 +26,6 @@ namespace QLNet
         private void buttonEdit_Click(object sender, EventArgs e)
         {
             string id = textBoxUser.Text;
-            string pass = textBoxPass.Text;
             string name = textBoxName.Text;
             string phone = textBoxPhone.Text;
             string mail = textBoxEmail.Text;
@@ -34,7 +33,7 @@ namespace QLNet
             DateTime birth = dateTimePickerNS.Value;
             try
             {
-                if (kh.update(id, pass, name, phone, mail, cmnd, birth))
+                if (kh.update(id, name, phone, mail, cmnd, birth))
                 {
                     MessageBox.Show("Information Updated", "Edit Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -47,6 +46,11 @@ namespace QLNet
             {
                 MessageBox.Show(ex.Message, "Edit Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

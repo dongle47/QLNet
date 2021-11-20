@@ -42,7 +42,7 @@ namespace QLNet
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(53, 62);
+            this.label2.Location = new System.Drawing.Point(21, 57);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 1;
@@ -50,43 +50,46 @@ namespace QLNet
             // 
             // textBoxTenKv
             // 
-            this.textBoxTenKv.Location = new System.Drawing.Point(127, 59);
+            this.textBoxTenKv.Location = new System.Drawing.Point(95, 54);
             this.textBoxTenKv.Name = "textBoxTenKv";
             this.textBoxTenKv.Size = new System.Drawing.Size(107, 20);
             this.textBoxTenKv.TabIndex = 2;
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(12, 118);
+            this.buttonAdd.Location = new System.Drawing.Point(76, 97);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd.Size = new System.Drawing.Size(75, 31);
             this.buttonAdd.TabIndex = 3;
             this.buttonAdd.Text = "THÊM";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(107, 117);
+            this.buttonEdit.Location = new System.Drawing.Point(199, 156);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(75, 23);
+            this.buttonEdit.Size = new System.Drawing.Size(75, 30);
             this.buttonEdit.TabIndex = 5;
             this.buttonEdit.Text = "CHỈNH SỬA";
             this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // buttonXoa
             // 
-            this.buttonXoa.Location = new System.Drawing.Point(207, 117);
+            this.buttonXoa.Location = new System.Drawing.Point(291, 156);
             this.buttonXoa.Name = "buttonXoa";
-            this.buttonXoa.Size = new System.Drawing.Size(75, 23);
+            this.buttonXoa.Size = new System.Drawing.Size(75, 30);
             this.buttonXoa.TabIndex = 6;
             this.buttonXoa.Text = "XÓA";
             this.buttonXoa.UseVisualStyleBackColor = true;
+            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(317, 118);
+            this.buttonCancel.Location = new System.Drawing.Point(385, 156);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.Size = new System.Drawing.Size(75, 31);
             this.buttonCancel.TabIndex = 7;
             this.buttonCancel.Text = "Thoát";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -95,16 +98,16 @@ namespace QLNet
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 178);
+            this.dataGridView1.Location = new System.Drawing.Point(223, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(308, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(237, 127);
             this.dataGridView1.TabIndex = 8;
             // 
             // AreaList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(412, 340);
+            this.ClientSize = new System.Drawing.Size(484, 199);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonXoa);

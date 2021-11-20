@@ -40,7 +40,7 @@ namespace QLNet
         {
             EditCustomer f = new EditCustomer();
             f.textBoxUserName.Text = labelUserId.Text;
-            f.textBoxPass.Text = dataGridViewListCustomer.CurrentRow.Cells[1].Value.ToString();
+            //f.textBoxPass.Text = dataGridViewListCustomer.CurrentRow.Cells[1].Value.ToString();
             f.textBoxFullName.Text = dataGridViewListCustomer.CurrentRow.Cells[2].Value.ToString();
             f.textBoxPhone.Text = dataGridViewListCustomer.CurrentRow.Cells[3].Value.ToString();
             f.textBoxEmail.Text = dataGridViewListCustomer.CurrentRow.Cells[4].Value.ToString();
@@ -63,11 +63,11 @@ namespace QLNet
             {
                 if (kh.insert(id, pass, name, phone, mail, cmnd, birth))
                 {
-                    MessageBox.Show("Information Updated", "Edit Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Đã thêm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Error", "Edit Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Đã thêm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
@@ -80,20 +80,31 @@ namespace QLNet
 
         private void buttonXoa_Click(object sender, EventArgs e)
         {
-            string id = labelUserId.Text;
-            if ((MessageBox.Show("Are You Sure You Want To Delete This Worker", "Delete Worker", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
+            try
             {
-                if (kh.delete(id))
+                string id = labelUserId.Text;
+                if ((MessageBox.Show("Bạn có chắc muốn xóa", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
                 {
-                    MessageBox.Show("Worker Deleted", "Delete Worker", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (kh.deleteUserSQL(id))
+                    {
+                        MessageBox.Show("Đã xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Đã xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Worker Not Deleted", "Delete Worker", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                SqlCommand command = new SqlCommand("SELECT * FROM customerList");
+                fillGrid(command);
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Không xóa được", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            SqlCommand command = new SqlCommand("SELECT * FROM customerList");
-            fillGrid(command);
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

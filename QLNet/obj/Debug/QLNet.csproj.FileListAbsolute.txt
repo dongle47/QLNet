@@ -27,7 +27,6 @@ C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.EditComputer.reso
 C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.ListComputer.resources
 C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.EditCustomer.resources
 C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.ListCustomer.resources
-C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.InfoUser.resources
 C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.EditMenu.resources
 C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.ListMenu.resources
 C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.LoginForm.resources
@@ -45,3 +44,5 @@ C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.IncomeForm.resour
 C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.GoiMonForm.resources
 C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.InfoAdmin.resources
 C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.InfoCustomer.resources
+C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.ChangePasswordForm.resources
+C:\Users\PC\Desktop\DBMS\Đồ án\QLNet\QLNet\obj\Debug\QLNet.BillForm.resources

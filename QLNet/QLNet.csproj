@@ -46,14 +46,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="admin.cs" />
+    <Compile Include="Admin\admin.cs" />
+    <Compile Include="Area\area.cs" />
     <Compile Include="Area\AreaList.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Area\AreaList.Designer.cs">
       <DependentUpon>AreaList.cs</DependentUpon>
     </Compile>
-    <Compile Include="computer.cs" />
+    <Compile Include="Admin\BillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\BillForm.Designer.cs">
+      <DependentUpon>BillForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePasswordForm.Designer.cs">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Computer\computer.cs" />
     <Compile Include="Computer\EditComputer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,11 +79,11 @@
     <Compile Include="Computer\ListComputer.Designer.cs">
       <DependentUpon>ListComputer.cs</DependentUpon>
     </Compile>
-    <Compile Include="customer.cs" />
-    <Compile Include="Customer\EditCustomer.cs">
+    <Compile Include="Customer\customer.cs" />
+    <Compile Include="Admin\EditCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer\EditCustomer.Designer.cs">
+    <Compile Include="Admin\EditCustomer.Designer.cs">
       <DependentUpon>EditCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\ListCustomer.cs">
@@ -86,22 +99,22 @@
     <Compile Include="Area\EditArea.Designer.cs">
       <DependentUpon>EditArea.cs</DependentUpon>
     </Compile>
-    <Compile Include="GoiMonForm.cs">
+    <Compile Include="Customer\GoiMonForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GoiMonForm.Designer.cs">
+    <Compile Include="Customer\GoiMonForm.Designer.cs">
       <DependentUpon>GoiMonForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="HistoryLoginForm.cs">
+    <Compile Include="Admin\HistoryLoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HistoryLoginForm.Designer.cs">
+    <Compile Include="Admin\HistoryLoginForm.Designer.cs">
       <DependentUpon>HistoryLoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="IncomeForm.cs">
+    <Compile Include="Admin\IncomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IncomeForm.Designer.cs">
+    <Compile Include="Admin\IncomeForm.Designer.cs">
       <DependentUpon>IncomeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\InfoAdmin.cs">
@@ -110,19 +123,13 @@
     <Compile Include="Admin\InfoAdmin.Designer.cs">
       <DependentUpon>InfoAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="InfoCustomer.cs">
+    <Compile Include="Customer\InfoCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InfoCustomer.Designer.cs">
+    <Compile Include="Customer\InfoCustomer.Designer.cs">
       <DependentUpon>InfoCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="InfoUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InfoUser.Designer.cs">
-      <DependentUpon>InfoUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="menu.cs" />
+    <Compile Include="Menu\menu.cs" />
     <Compile Include="Menu\EditMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,10 +161,10 @@
       <DependentUpon>MainFormCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="MyDB.cs" />
-    <Compile Include="NapTienWindow.cs">
+    <Compile Include="Admin\NapTienWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NapTienWindow.Designer.cs">
+    <Compile Include="Admin\NapTienWindow.Designer.cs">
       <DependentUpon>NapTienWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -165,13 +172,19 @@
     <EmbeddedResource Include="Area\AreaList.resx">
       <DependentUpon>AreaList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\BillForm.resx">
+      <DependentUpon>BillForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Computer\EditComputer.resx">
       <DependentUpon>EditComputer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Computer\ListComputer.resx">
       <DependentUpon>ListComputer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer\EditCustomer.resx">
+    <EmbeddedResource Include="Admin\EditCustomer.resx">
       <DependentUpon>EditCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\ListCustomer.resx">
@@ -180,23 +193,20 @@
     <EmbeddedResource Include="Area\EditArea.resx">
       <DependentUpon>EditArea.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GoiMonForm.resx">
+    <EmbeddedResource Include="Customer\GoiMonForm.resx">
       <DependentUpon>GoiMonForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HistoryLoginForm.resx">
+    <EmbeddedResource Include="Admin\HistoryLoginForm.resx">
       <DependentUpon>HistoryLoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IncomeForm.resx">
+    <EmbeddedResource Include="Admin\IncomeForm.resx">
       <DependentUpon>IncomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\InfoAdmin.resx">
       <DependentUpon>InfoAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InfoCustomer.resx">
+    <EmbeddedResource Include="Customer\InfoCustomer.resx">
       <DependentUpon>InfoCustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InfoUser.resx">
-      <DependentUpon>InfoUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\EditMenu.resx">
       <DependentUpon>EditMenu.cs</DependentUpon>
@@ -213,7 +223,7 @@
     <EmbeddedResource Include="Customer\MainFormCustomer.resx">
       <DependentUpon>MainFormCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NapTienWindow.resx">
+    <EmbeddedResource Include="Admin\NapTienWindow.resx">
       <DependentUpon>NapTienWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

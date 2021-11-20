@@ -55,7 +55,7 @@ namespace QLNet
             // dataGridViewListCustomer
             // 
             this.dataGridViewListCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewListCustomer.Location = new System.Drawing.Point(318, 12);
+            this.dataGridViewListCustomer.Location = new System.Drawing.Point(320, 73);
             this.dataGridViewListCustomer.Name = "dataGridViewListCustomer";
             this.dataGridViewListCustomer.Size = new System.Drawing.Size(478, 227);
             this.dataGridViewListCustomer.TabIndex = 0;
@@ -63,16 +63,17 @@ namespace QLNet
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(672, 286);
+            this.buttonCancel.Location = new System.Drawing.Point(642, 328);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(98, 30);
             this.buttonCancel.TabIndex = 2;
             this.buttonCancel.Text = "THOÁT";
             this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(342, 286);
+            this.buttonEdit.Location = new System.Drawing.Point(339, 328);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(110, 30);
             this.buttonEdit.TabIndex = 3;
@@ -82,7 +83,7 @@ namespace QLNet
             // 
             // buttonXoa
             // 
-            this.buttonXoa.Location = new System.Drawing.Point(498, 286);
+            this.buttonXoa.Location = new System.Drawing.Point(497, 328);
             this.buttonXoa.Name = "buttonXoa";
             this.buttonXoa.Size = new System.Drawing.Size(98, 30);
             this.buttonXoa.TabIndex = 4;
@@ -216,6 +217,7 @@ namespace QLNet
             // labelUserId
             // 
             this.labelUserId.AutoSize = true;
+            this.labelUserId.ForeColor = System.Drawing.SystemColors.Control;
             this.labelUserId.Location = new System.Drawing.Point(455, 357);
             this.labelUserId.Name = "labelUserId";
             this.labelUserId.Size = new System.Drawing.Size(36, 13);
@@ -226,7 +228,7 @@ namespace QLNet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 392);
+            this.ClientSize = new System.Drawing.Size(849, 392);
             this.Controls.Add(this.labelUserId);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label7);

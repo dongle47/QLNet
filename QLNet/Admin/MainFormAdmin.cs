@@ -25,13 +25,10 @@ namespace QLNet
 
         private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SqlDataAdapter adapter = new SqlDataAdapter();
-            DataTable table = new DataTable();
-
             SqlCommand command = new SqlCommand("EXEC infoAdminById @username = @id", db.getConnection);
             command.Parameters.Add("@id", SqlDbType.NVarChar).Value = labelUsername.Text;
-            adapter.SelectCommand = command;
-            adapter.Fill(table);
+            DataTable table = DBSQLServerUtils.getTable(command);
+
             if (table.Rows.Count > 0)
             {
                 InfoAdmin f = new InfoAdmin();
@@ -91,7 +88,23 @@ namespace QLNet
 
         private void doanhThuToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            SqlCommand command = new SqlCommand("SELECT dbo.avgIncome()", db.getConnection);
+            DataTable table = DBSQLServerUtils.getTable(command);
             IncomeForm f = new IncomeForm();
+            f.labelIncomeAvg.Text = "Thu nhập hằng tháng: " + table.Rows[0][0].ToString();
+            f.ShowDialog();
+        }
+
+        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangePasswordForm f = new ChangePasswordForm();
+            f.labelId.Text = this.labelUsername.Text;
+            f.ShowDialog();
+        }
+
+        private void hóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BillForm f = new BillForm();
             f.ShowDialog();
         }
     }

@@ -53,6 +53,7 @@ namespace QLNet
             this.buttonCancel.TabIndex = 25;
             this.buttonCancel.Text = "THOÁT";
             this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonEdit
             // 
@@ -88,6 +89,7 @@ namespace QLNet
             // labelidArea
             // 
             this.labelidArea.AutoSize = true;
+            this.labelidArea.ForeColor = System.Drawing.SystemColors.Control;
             this.labelidArea.Location = new System.Drawing.Point(87, 25);
             this.labelidArea.Name = "labelidArea";
             this.labelidArea.Size = new System.Drawing.Size(59, 13);
@@ -124,6 +126,7 @@ namespace QLNet
             // labelId
             // 
             this.labelId.AutoSize = true;
+            this.labelId.ForeColor = System.Drawing.SystemColors.Control;
             this.labelId.Location = new System.Drawing.Point(12, 25);
             this.labelId.Name = "labelId";
             this.labelId.Size = new System.Drawing.Size(15, 13);
@@ -162,7 +165,6 @@ namespace QLNet
             this.label4.Size = new System.Drawing.Size(60, 13);
             this.label4.TabIndex = 29;
             this.label4.Text = "Description";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // EditComputer
             // 

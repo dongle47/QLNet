@@ -42,20 +42,23 @@ namespace QLNet
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.xemThôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gọiMónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button2 = new System.Windows.Forms.Button();
             this.labelId = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Location = new System.Drawing.Point(130, 159);
+            this.groupBox1.Location = new System.Drawing.Point(254, 48);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(270, 131);
             this.groupBox1.TabIndex = 10;
@@ -67,9 +70,9 @@ namespace QLNet
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(149, 54);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 13);
+            this.label9.Size = new System.Drawing.Size(49, 13);
             this.label9.TabIndex = 10;
-            this.label9.Text = "19110347";
+            this.label9.Text = "1911370";
             // 
             // label8
             // 
@@ -110,7 +113,7 @@ namespace QLNet
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(201, 126);
+            this.label4.Location = new System.Drawing.Point(50, 123);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(157, 13);
             this.label4.TabIndex = 9;
@@ -119,7 +122,7 @@ namespace QLNet
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(214, 97);
+            this.label3.Location = new System.Drawing.Point(63, 94);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 13);
             this.label3.TabIndex = 8;
@@ -128,7 +131,7 @@ namespace QLNet
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(246, 73);
+            this.label2.Location = new System.Drawing.Point(95, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 7;
@@ -137,7 +140,7 @@ namespace QLNet
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(201, 40);
+            this.label1.Location = new System.Drawing.Point(57, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(122, 13);
             this.label1.TabIndex = 6;
@@ -147,7 +150,8 @@ namespace QLNet
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.xemThôngTinCáNhânToolStripMenuItem,
-            this.gọiMónToolStripMenuItem});
+            this.gọiMónToolStripMenuItem,
+            this.đổiMậtKhẩuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(536, 24);
@@ -168,11 +172,18 @@ namespace QLNet
             this.gọiMónToolStripMenuItem.Text = "Gọi món";
             this.gọiMónToolStripMenuItem.Click += new System.EventHandler(this.gọiMónToolStripMenuItem_Click);
             // 
+            // đổiMậtKhẩuToolStripMenuItem
+            // 
+            this.đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
+            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
+            this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi mật khẩu";
+            this.đổiMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.đổiMậtKhẩuToolStripMenuItem_Click);
+            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(217, 311);
+            this.button2.Location = new System.Drawing.Point(206, 199);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 27);
+            this.button2.Size = new System.Drawing.Size(104, 35);
             this.button2.TabIndex = 12;
             this.button2.Text = "THOÁT";
             this.button2.UseVisualStyleBackColor = true;
@@ -181,17 +192,27 @@ namespace QLNet
             // labelId
             // 
             this.labelId.AutoSize = true;
-            this.labelId.Location = new System.Drawing.Point(34, 235);
+            this.labelId.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelId.Location = new System.Drawing.Point(89, 325);
             this.labelId.Name = "labelId";
             this.labelId.Size = new System.Drawing.Size(41, 13);
             this.labelId.TabIndex = 13;
             this.labelId.Text = "label10";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(149, 76);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(49, 13);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "1911412";
+            // 
             // MainFormCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(536, 350);
+            this.ClientSize = new System.Drawing.Size(536, 245);
             this.Controls.Add(this.labelId);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
@@ -203,6 +224,7 @@ namespace QLNet
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainFormCustomer";
             this.Text = "MainFormCustomer";
+            this.Load += new System.EventHandler(this.MainFormCustomer_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -229,5 +251,7 @@ namespace QLNet
         private System.Windows.Forms.ToolStripMenuItem gọiMónToolStripMenuItem;
         private System.Windows.Forms.Button button2;
         public System.Windows.Forms.Label labelId;
+        private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
+        private System.Windows.Forms.Label label10;
     }
 }

@@ -10,6 +10,7 @@ namespace QLNet
 {
     class DBSQLServerUtils
     {
+        MyDB mydb = new MyDB();
         public static SqlConnection
         //GetDBConnection(string datasource, string database, string username, string password)
         //{
@@ -26,22 +27,6 @@ namespace QLNet
             return conn;
         }
 
-        //public void openConnection()
-        //{
-        //    SqlCommand con = DBSQLServerUtils.GetDBConnection(); 
-        //    if (conn.State == System.Data.ConnectionState.Closed)
-        //    {
-        //        con.Open();
-        //    }
-        //}
-        //public void closeConnection()
-        //{
-        //    if (con.State == System.Data.ConnectionState.Open)
-        //    {
-        //        con.Close();
-        //    }
-        //}
-
         public static DataTable getTable(SqlCommand command)
         {
             command.Connection = new SqlConnection("Data Source = localhost\\MSSQLSERVER01; Initial Catalog=QLNet; Integrated Security=True");
@@ -49,6 +34,24 @@ namespace QLNet
             DataTable table = new DataTable();
             adapter.Fill(table);
             return table;
+        }
+
+        public bool changePassword(string id, string pass)
+        {
+            SqlCommand command = new SqlCommand("EXEC changePassUserSQL @customerId = @id, @newPass = @pass", mydb.getConnection);
+            command.Parameters.Add("@id", SqlDbType.NVarChar).Value = id;
+            command.Parameters.Add("@pass", SqlDbType.NVarChar).Value = pass;
+            mydb.openConnection();
+            if ((command.ExecuteNonQuery() == 1))
+            {
+                mydb.closeConnection();
+                return true;
+            }
+            else
+            {
+                mydb.closeConnection();
+                return false;
+            }
         }
     }
 }

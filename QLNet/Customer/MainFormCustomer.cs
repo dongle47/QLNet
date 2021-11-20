@@ -21,17 +21,14 @@ namespace QLNet
         private void xemThôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SqlDataAdapter adapter = new SqlDataAdapter();
-            DataTable table = new DataTable();
 
             SqlCommand command = new SqlCommand("EXEC infoCustomerById @username = @id", db.getConnection);
             command.Parameters.Add("@id", SqlDbType.NVarChar).Value = labelId.Text;
-            adapter.SelectCommand = command;
-            adapter.Fill(table);
+            DataTable table = DBSQLServerUtils.getTable(command);
             if (table.Rows.Count > 0)
             {
                 InfoCustomer f = new InfoCustomer();
                 f.textBoxUser.Text = table.Rows[0][0].ToString();
-                f.textBoxPass.Text = table.Rows[0][1].ToString();
                 f.textBoxName.Text = table.Rows[0][2].ToString();
                 f.textBoxPhone.Text = table.Rows[0][3].ToString();
                 f.textBoxEmail.Text = table.Rows[0][4].ToString();
@@ -61,9 +58,22 @@ namespace QLNet
             {
                 GoiMonForm f = new GoiMonForm();
                 f.labelIdBill.Text = table.Rows[0][0].ToString();
-                f.labelTotal.Text = table.Rows[0][3].ToString();
+                f.labelMaHoaDon.Text = "Mã hóa đơn: " + table.Rows[0][0].ToString();
+                f.labelTotal.Text = "Tổng cộng" +table.Rows[0][3].ToString();
                 f.ShowDialog();
             }
+        }
+
+        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangePasswordForm f = new ChangePasswordForm();
+            f.labelId.Text = this.labelId.Text;
+            f.Show();
+        }
+
+        private void MainFormCustomer_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -44,14 +44,14 @@ namespace QLNet
             // dataGridViewMenu
             // 
             this.dataGridViewMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewMenu.Location = new System.Drawing.Point(342, 12);
+            this.dataGridViewMenu.Location = new System.Drawing.Point(267, 12);
             this.dataGridViewMenu.Name = "dataGridViewMenu";
             this.dataGridViewMenu.Size = new System.Drawing.Size(307, 150);
             this.dataGridViewMenu.TabIndex = 0;
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(360, 209);
+            this.buttonEdit.Location = new System.Drawing.Point(267, 191);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(89, 28);
             this.buttonEdit.TabIndex = 1;
@@ -61,7 +61,7 @@ namespace QLNet
             // 
             // buttonXoa
             // 
-            this.buttonXoa.Location = new System.Drawing.Point(465, 209);
+            this.buttonXoa.Location = new System.Drawing.Point(381, 191);
             this.buttonXoa.Name = "buttonXoa";
             this.buttonXoa.Size = new System.Drawing.Size(81, 28);
             this.buttonXoa.TabIndex = 2;
@@ -71,7 +71,7 @@ namespace QLNet
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(574, 209);
+            this.buttonCancel.Location = new System.Drawing.Point(484, 191);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(90, 28);
             this.buttonCancel.TabIndex = 3;
@@ -81,7 +81,7 @@ namespace QLNet
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(144, 191);
+            this.buttonAdd.Location = new System.Drawing.Point(69, 191);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(102, 32);
             this.buttonAdd.TabIndex = 4;
@@ -91,14 +91,14 @@ namespace QLNet
             // 
             // textBoxPrice
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(160, 113);
+            this.textBoxPrice.Location = new System.Drawing.Point(85, 113);
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(100, 20);
             this.textBoxPrice.TabIndex = 8;
             // 
             // textBoxFoodName
             // 
-            this.textBoxFoodName.Location = new System.Drawing.Point(160, 68);
+            this.textBoxFoodName.Location = new System.Drawing.Point(85, 68);
             this.textBoxFoodName.Name = "textBoxFoodName";
             this.textBoxFoodName.Size = new System.Drawing.Size(100, 20);
             this.textBoxFoodName.TabIndex = 7;
@@ -106,7 +106,7 @@ namespace QLNet
             // labelPrice
             // 
             this.labelPrice.AutoSize = true;
-            this.labelPrice.Location = new System.Drawing.Point(109, 116);
+            this.labelPrice.Location = new System.Drawing.Point(34, 116);
             this.labelPrice.Name = "labelPrice";
             this.labelPrice.Size = new System.Drawing.Size(43, 13);
             this.labelPrice.TabIndex = 6;
@@ -115,7 +115,7 @@ namespace QLNet
             // labelFoodName
             // 
             this.labelFoodName.AutoSize = true;
-            this.labelFoodName.Location = new System.Drawing.Point(90, 71);
+            this.labelFoodName.Location = new System.Drawing.Point(15, 71);
             this.labelFoodName.Name = "labelFoodName";
             this.labelFoodName.Size = new System.Drawing.Size(64, 13);
             this.labelFoodName.TabIndex = 5;
@@ -125,7 +125,7 @@ namespace QLNet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(713, 304);
+            this.ClientSize = new System.Drawing.Size(625, 256);
             this.Controls.Add(this.textBoxPrice);
             this.Controls.Add(this.textBoxFoodName);
             this.Controls.Add(this.labelPrice);

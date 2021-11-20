@@ -21,7 +21,6 @@ namespace QLNet
         private void buttonEdit_Click(object sender, EventArgs e)
         {
             string id = textBoxUserName.Text;
-            string pass = textBoxPass.Text;
             string name = textBoxFullName.Text;
             string phone = textBoxPhone.Text;
             string mail = textBoxEmail.Text;
@@ -29,9 +28,9 @@ namespace QLNet
             DateTime birth = dateTimePicker1.Value;
             try
             {
-                if (kh.update(id, pass, name, phone, mail, cmnd, birth))
+                if (kh.update(id, name, phone, mail, cmnd, birth))
                 {
-                    MessageBox.Show("Information Updated", "Edit Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Đã cập nhật", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
