@@ -33,6 +33,7 @@ namespace QLNet
             DataTable table = DBSQLServerUtils.getTable(command);
             if (table.Rows.Count > 0)
             {
+                labelUsername.Text = "Username: " + table.Rows[0][0].ToString();
                 labelId.Text ="Username: " + table.Rows[0][0].ToString();
                 labelName.Text = "Tên: " + table.Rows[0][1].ToString();
                 labelNgsinh.Text = "Ngày sinh: " + table.Rows[0][2].ToString();

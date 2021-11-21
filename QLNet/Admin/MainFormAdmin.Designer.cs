@@ -45,6 +45,7 @@ namespace QLNet
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -52,7 +53,6 @@ namespace QLNet
             this.label5 = new System.Windows.Forms.Label();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.labelUsername = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -67,8 +67,8 @@ namespace QLNet
             this.nạpTiềnToolStripMenuItem1,
             this.lịchSửĐăngNhậpToolStripMenuItem,
             this.doanhThuToolStripMenuItem,
-            this.thôngTinCáNhânToolStripMenuItem,
             this.hóaĐơnToolStripMenuItem,
+            this.thôngTinCáNhânToolStripMenuItem,
             this.đổiMậtKhẩuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -197,6 +197,15 @@ namespace QLNet
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin thành viên";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(149, 76);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(55, 13);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "19110412";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -261,15 +270,6 @@ namespace QLNet
             this.labelUsername.Size = new System.Drawing.Size(53, 13);
             this.labelUsername.TabIndex = 7;
             this.labelUsername.Text = "username";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(149, 76);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 13);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "19110412";
             // 
             // MainFormAdmin
             // 
