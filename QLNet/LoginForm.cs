@@ -27,7 +27,7 @@ namespace QLNet
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            string database = comboBoxDataBase.SelectedItem.ToString();
+            string database = "QLNet";
             string username = textBoxUser.Text;
             string password = textBoxPass.Text;
 
@@ -77,23 +77,23 @@ namespace QLNet
         {
             textBoxPass.PasswordChar = '*';
 
-            SqlConnection connection = new SqlConnection("Data Source=DESKTOP-MGN3IP8\\MSSQLSERVER01; Initial Catalog=QLThuVien; Integrated Security=True");
+            //SqlConnection connection = new SqlConnection("Data Source=localhost\\MSSQLSERVER01; Initial Catalog=QLThuVien; Integrated Security=True");
 
-            SqlCommand command = new SqlCommand();
-            command.Connection = connection;
-            command.CommandType = CommandType.Text;
-            command.CommandText = "SELECT name FROM master.sys.databases";
+            //SqlCommand command = new SqlCommand();
+            //command.Connection = connection;
+            //command.CommandType = CommandType.Text;
+            //command.CommandText = "SELECT name FROM master.sys.databases";
 
-            SqlDataAdapter adapter = new SqlDataAdapter(command);
-            DataSet dataset = new DataSet();
-            adapter.Fill(dataset);
-            DataTable table = dataset.Tables[0];
-            for (int i = 0; i < dataset.Tables[0].Rows.Count; i++)
-            {
-                comboBoxDataBase.Items.Add(dataset.Tables[0].Rows[i][0].ToString());
-                connection.Close();
-            }
-            comboBoxDataBase.SelectedItem = "QLNet";
+            //SqlDataAdapter adapter = new SqlDataAdapter(command);
+            //DataSet dataset = new DataSet();
+            //adapter.Fill(dataset);
+            //DataTable table = dataset.Tables[0];
+            //for (int i = 0; i < dataset.Tables[0].Rows.Count; i++)
+            //{
+            //    comboBoxDataBase.Items.Add(dataset.Tables[0].Rows[i][0].ToString());
+            //    connection.Close();
+            //}
+            //comboBoxDataBase.SelectedItem = "QLNet";
         }
 
     }
