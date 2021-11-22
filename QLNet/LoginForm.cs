@@ -34,7 +34,7 @@ namespace QLNet
             SqlConnection con = DBSQLServerUtils.GetDBConnection(database, username, password); ;
             try
             {
-                SqlCommand command = new SqlCommand("SELECT * FROM users WHERE userUsername=@id AND userPassword=@Pass AND userRole='ad'", db.getConnection);
+                SqlCommand command = new SqlCommand("select * from check_login_admin (@id, @Pass)", db.getConnection);
                 command.Parameters.Add("@id", SqlDbType.NVarChar).Value = textBoxUser.Text;
                 command.Parameters.Add("@Pass", SqlDbType.VarChar).Value = textBoxPass.Text;
                 DataTable tableAd = DBSQLServerUtils.getTable(command);
@@ -48,7 +48,7 @@ namespace QLNet
                 }
                 else
                 {
-                    command = new SqlCommand("SELECT * FROM users WHERE userUsername=@id AND userPassword=@Pass AND userRole='kh'", db.getConnection);
+                    command = new SqlCommand("select * from check_login_customer (@id, @Pass)", db.getConnection);
                     command.Parameters.Add("@id", SqlDbType.NVarChar).Value = textBoxUser.Text;
                     command.Parameters.Add("@Pass", SqlDbType.NVarChar).Value = textBoxPass.Text;
                     DataTable tableKh = DBSQLServerUtils.getTable(command);
